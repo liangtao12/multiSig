@@ -1,0 +1,30 @@
+{
+  "name": "community-group-buying-settlement",
+  "version": "1.0.0",
+  "description": "基于智能合约多签的社区团购多方对账与净额清算系统",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node scripts/compile.js",
+    "deploy": "node scripts/deploy.js",
+    "seed": "node scripts/seed-products.js",
+    "fund-buyers": "node scripts/fund-buyers.js",
+    "start": "node simple-server.js",
+    "geth:init": "node scripts/init-geth.js",
+    "geth": "geth --datadir geth-data --networkid 887766 --http --http.api eth,net,web3,personal,miner --http.corsdomain http://localhost:3000 --http.port 8545 --http.addr 127.0.0.1 --syncmode=full --gcmode=archive --unlock 0x1Be31A94361a391bBaFB2a4CCd704F57dc04d4bb --password geth-data/password.txt --allow-insecure-unlock --ipcdisable --nodiscover"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart-contract",
+    "settlement"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "solc": "^0.8.20"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0",
+    "express": "^5.2.1"
+  }
+}
